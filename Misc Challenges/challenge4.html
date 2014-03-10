@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#fader").mouseover(function(){
+      $("#fader").fadeOut(4000);
+    }); 
+	
+	$( ".thumbnail" ).click(function() {
+	  $( this ).find('img').animate({
+		width: "toggle"
+	  }, 5000, function() {
+		// Animation complete.
+	  });
+    });
+	
+	// Initialize the Tooltips & Popovers
+	$(function() {
+    	$('a[rel="tooltip"]').tooltip();
+	});
+	
+	$(function() {
+    	$('a[rel="popover"]').popover();
+	});
+	
+	
+	$('[data-spy="scroll"]').each(function () {
+  		var $spy = $(this).scrollspy('refresh')
+	})
+	
+	// Keyboard Navigation
+	$(function() {
+		$(document.documentElement).keyup(function (event) {			
+			// handle cursor keys
+			if (event.keyCode == 37) {
+			    // go left
+				var selected = $(".active");
+				if (selected.attr('id') != "navfirst") {
+					$(".navbar-nav li").removeClass("active");
+					selected.prev().addClass("active");
+				}				
+				
+			} else if (event.keyCode == 39) {
+				// go right
+				var selected = $(".active");
+				if (selected.attr('id') != "navlast") {
+					$(".navbar-nav li").removeClass("active");
+					selected.next().addClass("active");
+				}	}	
+		});
+	});
+	
+  });
+  </script>
+  
+  <!-- JSON Objects -->
+  <script type="text/javascript">
+  	var headerStyle = {
+		"align" : "center",
+		"color" : "black"	
+	};
+	
+	$(document).ready(function(){
+		$("#headerName").css("text-align", headerStyle.align);
+		$("#headerName").css("color", headerStyle.color);
+		$("#headerSub").css("text-align", headerStyle.align);
+		$("#headerSub").css("color", headerStyle.color);
+	});
+  </script> 
+  </head>
+  <body>
+	  
+  <!-- CHALLENGE 4 -->
+  
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Matthew Gross</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li id="navfirst" class="active"><a href="#">Home</a></li>
+        <li><a href="#">Overview</a></li>
+        <li id="navlast" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Studies</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+  </nav>
+  
+  <!-- Modals -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Fantasy Ultimate</h4>
+      </div>
+      <div class="modal-body">
+        This project was made for Software Engineering Methods &amp; Tools. It it heavily reliant on a number of large relational tables in order to track player progress and user interaction.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+	  
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+		<h1 id="headerName">Matthew Gross</h1>
+		<h5 id="headerSub">Software Developer<span id="fader"> &amp; Floral Enthusiast</span></h5>
+		</div>
+	</div>
+	
+	<hr>
+    
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Fantasy Ultimate Website Project
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="row">
+            <div class="col-md-9">
+                Fantasy Ultimate website created using PHP and MySQL. This site allows users to compete against one another using the same general principles of Fantasy Football, only with Ultimate instead.<br /><br /><a href="#" data-toggle="modal" data-target="#myModal">Read More</a><br /><a href="http://mattkgross.com/ulti/" rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="Visit FantasyUlti" data-original-title="Visit FantasyUlti">Visit Site</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail">
+                  <img src="http://mattkgross.com/img/prev1.jpg" class="nudnail">
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          MP3 Master
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#" class="thumbnail">
+                  <img src="http://mattkgross.com/img/prev6.jpg" class="nudnail">
+                </a>
+            </div>
+            <div class="col-md-9">
+                Sorts MP3s in a directory based on a schema chosen by the user. Also enables editing of song metadata, including album artwork. Exports the sorted media into a recursive file hierarchy for easy import into iTunes or Spotify.<br /><br /><a href="#" rel="popover" data-container="body" data-toggle="popover" data-placement="right" data-trigger="hover" data-content="See how MP3Master uses its own, custom library to sort your music.">Learn More</a><br /><a href="https://github.com/mattkgross/notecards">View Site</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Experiences
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+        
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <center><img src="slide1.jpg" alt="SSH"></center>
+              <div class="carousel-caption">
+                My own LAMP server I set up - complete with remote SSH!
+              </div>
+            </div>
+            <div class="item">
+              <center><img src="slide2.jpg" alt="Zen Rock"></center>
+              <div class="carousel-caption">
+                Hiking adventures often lead to encounters with cool objects like this rock.
+              </div>
+            </div>
+            <div class="item">
+              <center><img src="slide3.jpg" alt="Climbing"></center>
+              <div class="carousel-caption">
+                Hiking 14ers is one of my favorite pasttimes.
+              </div>
+            </div>
+          </div>
+        
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          Skills
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!--	
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3"></div>
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h4>Fantasy Ultimate Website Project</h4></div>
+			  <div class="panel-body">
+				<div class="row">
+					<div class="col-md-9">
+						Fantasy Ultimate website created using PHP and MySQL. This site allows users to compete against one another using the same general principles of Fantasy Football, only with Ultimate instead.<br /><br /><a href="#" data-toggle="modal" data-target="#myModal">Read More</a><br /><a href="http://mattkgross.com/ulti/" data-toggle="tooltip" data-placement="bottom" title="Visit FantasyUlti" data-original-title="Visit FantasyUlti">Visit Site</a>
+					</div>
+					<div class="col-md-3">
+						<a href="#" class="thumbnail">
+						  <img src="http://mattkgross.com/img/prev1.jpg" class="nudnail">
+						</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+  </div>
+  
+  <div class="row">
+		<div class="col-md-6 col-md-offset-3"></div>
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h4>MP3 Master</h4></div>
+			  <div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#" class="thumbnail">
+						  <img src="http://mattkgross.com/img/prev6.jpg" class="nudnail">
+						</a>
+					</div>
+					<div class="col-md-9">
+						Sorts MP3s in a directory based on a schema chosen by the user. Also enables editing of song metadata, including album artwork. Exports the sorted media into a recursive file hierarchy for easy import into iTunes or Spotify.<br /><br /><a href="https://github.com/mattkgross/notecards">View Site</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div> -->
+    
+  </div>
+</body>
+</html>

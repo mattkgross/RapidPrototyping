@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Matthew Gross' Project</title>
+<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button.bg").click(function(){
+  	  var color = $(this).text();
+	  $("body").css({"background-color":color});
+  });
+  
+  $("button.font").click(function(){
+	  var color = $(this).text();
+	  $("button.fruit").css({"color":color});
+  });
+});
+</script>
+</head>
+<body>
+<h1 style="text-align:center; color:blue">Matthew Gross</h1><br /><br />
+<table align="center" cellspacing="15">
+<tr>
+<td>
+<table cellspacing="5">
+<tr>
+<td colspan="3">
+Change the background color of the entire page to:
+</td>
+</tr>
+<tr>
+<td><button class="bg">Black</button></td>
+<td><button class="bg">Red</button></td>
+<td><button class="bg">Yellow</button></td>
+</tr>
+<tr>
+<td colspan="3">
+Change the font color of the fruit buttons to:
+</td>
+</tr>
+<tr>
+<td><button class="font">Black</button></td>
+<td><button class="font">Red</button></td>
+<td><button class="font">Yellow</button></td>
+</tr>
+</table>
+</td>
+<td>
+<table cellspacing="10">
+<tr>
+<td><button class="fruit">Apple</button></td>
+</tr>
+<tr>
+<td><button class="fruit">Orange</button></td>
+</tr>
+<tr>
+<td><button class="fruit">Banana</button></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
