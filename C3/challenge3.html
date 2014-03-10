@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#fader").mouseover(function(){
+      $("#fader").fadeOut(4000);
+    }); 
+	
+	$( ".thumbnail" ).click(function() {
+	  $( this ).find('img').animate({
+		width: "toggle"
+	  }, 5000, function() {
+		// Animation complete.
+	  });
+    }); 
+  });
+  </script>
+  </head>
+  <body>
+	  
+  <!-- CHALLENGE 4 -->
+  
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Matthew Gross</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Overview</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Studies</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+  </nav>
+	  
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+		<h1 style="text-align:center;">Matthew Gross</h1>
+		<h5 style="text-align:center;">Software Developer<span id="fader"> &amp; Floral Enthusiast</span></h5>
+		</div>
+	</div>
+	
+	<hr>
+	
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3"></div>
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h4>Fantasy Ultimate Website Project</h4></div>
+			  <div class="panel-body">
+				<div class="row">
+					<div class="col-md-9">
+						Fantasy Ultimate website created using PHP and MySQL. This site allows users to compete against one another using the same general principles of Fantasy Football, only with Ultimate instead.<br /><br /><a href="http://mattkgross.com/ulti/">View Site</a>
+					</div>
+					<div class="col-md-3">
+						<a href="#" class="thumbnail">
+						  <img src="http://mattkgross.com/img/prev1.jpg" class="nudnail">
+						</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+  </div>
+  
+  <div class="row">
+		<div class="col-md-6 col-md-offset-3"></div>
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h4>MP3 Master</h4></div>
+			  <div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#" class="thumbnail">
+						  <img src="http://mattkgross.com/img/prev6.jpg" class="nudnail">
+						</a>
+					</div>
+					<div class="col-md-9">
+						Sorts MP3s in a directory based on a schema chosen by the user. Also enables editing of song metadata, including album artwork. Exports the sorted media into a recursive file hierarchy for easy import into iTunes or Spotify.<br /><br /><a href="https://github.com/mattkgross/notecards">View Site</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+  </div>
+  
+  <!-- CHALLENGE 3 -->
+  
+  <!--<nav class="navbar navbar-default" role="navigation">
+  <div class="alert alert-warning" style="text-align:center">This site is currently under maintenance. Expect short outages. Sorry for the inconvenience!</div>  
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DateSite</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile <span class="badge">4 Alerts</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <span class="label label-success">New!</span>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+			<div class="btn-group" style="padding-top: 8px">
+			  <button type="button" class="btn btn-danger">Log Out</button></button>
+			  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+				<span class="caret"></span>
+				<span class="sr-only">Toggle Dropdown</span>
+			  </button>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  
+  <div class="container-fluid">
+	<div class="row">
+	  <div class="col-md-3">
+		<a href="#" class="thumbnail">
+		  <img src="https://scontent-a.xx.fbcdn.net/hphotos-frc1/t31/1150702_10151574759450732_673079291_o.jpg">
+		</a>
+	  </div>
+	  <div class="col-md-9">
+		<h1>Matt Gross</h1>
+		<br />
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">Basic Information</div>
+		  <div class="panel-body">
+			Age: 21<br/>
+			Sex: Male<br />
+			Location: Boulder, CO<br />
+		  </div>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">Interests</h3>
+		  </div>
+		  <div class="panel-body">
+			<ul>
+				<li>Ultimate Frisbee</li>
+				<li>Bootstrap</li>
+				<li>Hot Dog Eating Contests</li>
+			</ul>
+		  </div>
+		</div>
+		
+		<div class="well">
+		I like long walks on the beach and lots of salsa on my nachos. Firefly is the best TV show ever and I hope to one day have someone with whom to share my obsessive passion over this show.
+		</div>
+		
+	  </div>
+	</div>
+  </div>-->
+  
+  
+  <!-- CHALLENGE 1 -->
+  
+  <!--<div class="container-fluid">
+    <div class="row">
+    	<div class="col-md-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Matthew Gross</h4><br />
+                    Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text.
+                </div>
+                <div class="col-md-4">
+                    <h4>Matthew Gross</h4><br />
+                    Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text.
+                </div>
+                <div class="col-md-4">
+                    <h4>Matthew Gross</h4><br />
+                    Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br /><h4>Matthew Gross</h4><br />
+                    Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br /><h4>Matthew Gross</h4><br />
+                    Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Matthew Gross</h4><br />
+                    Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text. Some text. Some text. Some more text. Some more text. A lot more text. A lot more text. More and more text. More and more text.
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>-->
+  
+  
+  <!-- CHALLENGE 2 -->
+  
+  <!--<h1 style="text-align:center">Dating Site - Registration</h1>
+  
+  <div class="container">
+  <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputName" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="name" class="form-control input-lg" id="inputName" placeholder="Name">
+    </div>
+  </div>
+  <div class="form-group has-warning has-feedback">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+  </div>
+  <div class="form-group has-success has-feedback">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control input-sm" id="inputPassword3" placeholder="Password">      
+      <span class="help-block">Your password must contain at least one symbol, number, and letter.</span>
+    </div>
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+  </div>
+  <div class="form-group">
+    <label for="exampleSex" class="col-sm-2 control-label">Sex</label>
+    <div class="col-sm-10">
+        <input type="radio" id="exampleSex" name="exampleSex">Male
+        <input type="radio" id="exampleSex" name="exampleSex">Female
+    </div>
+  </div>
+  <div class="form-group">
+  	<label for="inlineCheckbox" class="col-sm-2 control-label">Interested In</label>
+    <div class="col-sm-10">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1"> Men
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2"> Women
+        </label>
+    </div>
+  </div>  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Send me periodic newsletters
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-success active">Sign Up</button>
+      <button type="button" class="btn btn-primary disabled">Save for Later</button>
+      <button type="button" class="btn btn-default">Clear Fields</button>
+    </div>
+  </div>
+  </form>
+  </div>-->
+  </body>
+</html>
